@@ -19,3 +19,8 @@ module "vm" {
   source = "../../Module/VM"
   vm=var.vm
 }
+module "vm" {
+    depends_on = [ module.SUBNET ]
+  source = "../../Module/VM"
+  vm=var.vm
+}
